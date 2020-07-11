@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierbarahona.controller.RecetaController">
+   <children>
+      <Label layoutX="333.0" layoutY="23.0" text="Recetas">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="126.0" text="Descripción de la receta">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDescripcionReceta" editable="false" layoutX="259.0" layoutY="123.0" prefHeight="30.0" prefWidth="499.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </TextField>
+      <Label layoutX="43.0" layoutY="196.0" prefHeight="23.0" prefWidth="171.0" text="Código Control Cita">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoControlCita" disable="true" layoutX="259.0" layoutY="193.0" prefHeight="30.0" prefWidth="205.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </ComboBox>
+      <TableView fx:id="tblRecetas" layoutX="117.0" layoutY="258.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="200.0" prefWidth="573.0">
+         <columns>
+            <TableColumn fx:id="colCodigoReceta" prefWidth="139.0" text="Código Receta" />
+            <TableColumn fx:id="colDescripcion" prefWidth="305.0" text="Descripción de la receta" />
+            <TableColumn fx:id="colCodigoControlCita" minWidth="0.0" prefWidth="128.0" text="Código Control Cita" />
+         </columns>
+         <effect>
+            <DropShadow color="#0e92ff" height="41.76" radius="19.6375" width="38.79" />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="43.0" layoutY="479.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="106.0" text="Nuevo">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="172.0" layoutY="479.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="106.0" text="Eliminar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="302.0" layoutY="479.0" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="106.0" text="Editar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" disable="true" layoutX="434.0" layoutY="479.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="44.0" prefWidth="106.0" text="Cancelar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="80.0" fitWidth="106.0" onMouseClicked="#ventanaControlCitas" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Flecha%20volver.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

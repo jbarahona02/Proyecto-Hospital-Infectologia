@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="663.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierbarahona.controller.ContactoUrgenciaController">
+   <children>
+      <Label layoutX="301.0" layoutY="4.0" text="Contacto Urgencia">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="130.0" prefHeight="23.0" prefWidth="75.0" text="Nombres">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombres" editable="false" layoutX="228.0" layoutY="125.0" prefHeight="31.0" prefWidth="699.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </TextField>
+      <Label layoutX="8.0" layoutY="174.0" prefHeight="23.0" prefWidth="88.0" text="Apellidos">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="229.0" layoutY="167.0" prefHeight="31.0" prefWidth="699.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </TextField>
+      <Label layoutX="7.0" layoutY="213.0" prefHeight="23.0" prefWidth="174.0" text="Número de Contacto">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNumeroContacto" editable="false" layoutX="228.0" layoutY="208.0" prefHeight="31.0" prefWidth="271.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </TextField>
+      <Label layoutX="6.0" layoutY="255.0" prefHeight="23.0" prefWidth="174.0" text="Código de Paciente ">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoPaciente" disable="true" layoutX="229.0" layoutY="249.0" prefHeight="31.0" prefWidth="271.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </ComboBox>
+      <TableView fx:id="tblContactos" layoutX="12.0" layoutY="304.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="267.0" prefWidth="918.0">
+         <columns>
+            <TableColumn fx:id="colCodigoContacto" prefWidth="195.0" text="Código Contacto Urgencia" />
+            <TableColumn fx:id="colNombres" prefWidth="198.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="197.0" text="Apellidos" />
+            <TableColumn fx:id="colNumeroContacto" minWidth="0.0" prefWidth="174.0" text="Número de Contacto" />
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="153.0" text="Código de Paciente" />
+         </columns>
+         <effect>
+            <DropShadow color="#0e92ff" height="30.64" radius="13.8925" spread="0.45" width="26.93" />
+         </effect>
+      </TableView>
+      <ImageView fitHeight="92.0" fitWidth="119.0" layoutX="-1.0" layoutY="1.0" onMouseClicked="#ventanaPacientes" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Flecha%20volver.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnCancelar" disable="true" layoutX="393.0" layoutY="598.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="44.0" prefWidth="106.0" text="Cancelar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="151.0" layoutY="597.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="106.0" text="Eliminar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="272.0" layoutY="597.0" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="106.0" text="Editar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNuevo" layoutX="31.0" layoutY="597.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="106.0" text="Nuevo">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="7.0" layoutY="88.0" prefHeight="23.0" prefWidth="220.0" text="Código Contacto Urgencia">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoContacto" editable="false" layoutX="227.0" layoutY="84.0" prefHeight="31.0" prefWidth="271.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </TextField>
+   </children>
+</AnchorPane>

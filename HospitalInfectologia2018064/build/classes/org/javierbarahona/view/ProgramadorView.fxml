@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="733.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierbarahona.controller.ProgramadorController">
+   <children>
+      <ImageView fitHeight="92.0" fitWidth="119.0" layoutX="2.0" layoutY="2.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Flecha%20volver.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="241.0" layoutY="27.0" text="Programador">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="151.0" prefHeight="23.0" prefWidth="78.0" text="Nombre ">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="190.0" prefHeight="19.0" prefWidth="54.0" text="Carné">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="301.0" prefHeight="33.0" prefWidth="160.0" text="Correo Electrónico ">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="109.0" layoutY="146.0" prefHeight="33.0" prefWidth="274.0" text="Javier Alejandro Barahona Pasan">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="184.0" prefHeight="33.0" prefWidth="78.0" text="2018064">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="301.0" prefHeight="33.0" prefWidth="251.0" text="javier02barahona@gmail.com">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="208.0" fitWidth="202.0" layoutX="473.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Programador.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="33.0" layoutY="259.0" prefHeight="33.0" prefWidth="71.0" text="Sección ">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="111.0" layoutY="260.0" prefHeight="33.0" prefWidth="71.0" text="PE5AM">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="225.0" prefHeight="19.0" prefWidth="54.0" text="Clave">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="111.0" layoutY="225.0" prefHeight="23.0" prefWidth="14.0" text="3">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

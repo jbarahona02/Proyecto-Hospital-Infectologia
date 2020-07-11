@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierbarahona.controller.AreaController">
+   <children>
+      <Label layoutX="384.0" layoutY="34.0" text="Áreas">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="145.0" prefHeight="23.0" prefWidth="138.0" text="Nombre de Área">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombreArea" editable="false" layoutX="177.0" layoutY="141.0" prefHeight="31.0" prefWidth="614.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblAreas" layoutX="176.0" layoutY="206.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="299.0" prefWidth="614.0">
+         <columns>
+            <TableColumn fx:id="colCodigoArea" prefWidth="252.0" text="Código de Área" />
+            <TableColumn fx:id="colNombreArea" prefWidth="361.0" text="Nombre de Área" />
+         </columns>
+         <effect>
+            <DropShadow color="#0e92ff" height="30.64" radius="13.8925" spread="0.45" width="26.93" />
+         </effect>
+      </TableView>
+      <ImageView fitHeight="92.0" fitWidth="119.0" layoutX="6.0" layoutY="4.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Flecha%20volver.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="25.0" layoutY="525.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="106.0" text="Nuevo">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="145.0" layoutY="525.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="106.0" text="Eliminar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" disable="true" layoutX="387.0" layoutY="525.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="44.0" prefWidth="106.0" text="Cancelar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="266.0" layoutY="525.0" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="106.0" text="Editar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

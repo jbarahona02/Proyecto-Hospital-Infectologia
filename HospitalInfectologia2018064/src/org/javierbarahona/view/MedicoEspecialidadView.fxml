@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierbarahona.controller.MedicoEspecialidadController">
+   <children>
+      <Label layoutX="165.0" layoutY="29.0" prefHeight="54.0" prefWidth="432.0" text=" Médico Especialidad">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="117.0" prefHeight="23.0" prefWidth="135.0" text="Código Médico">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="163.0" prefHeight="23.0" prefWidth="172.0" text="Código Especialidad">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="211.0" prefHeight="23.0" prefWidth="135.0" text="Código Horario">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoMedico" disable="true" layoutX="222.0" layoutY="111.0" prefHeight="31.0" prefWidth="293.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="cmbCodigoEspecialidad" disable="true" layoutX="222.0" layoutY="159.0" prefHeight="31.0" prefWidth="293.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="cmbCodigoHorario" disable="true" layoutX="222.0" layoutY="207.0" prefHeight="31.0" prefWidth="293.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </ComboBox>
+      <TableView fx:id="tblMedicosEspecialidad" layoutX="41.0" layoutY="279.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="250.0" prefWidth="646.0">
+         <columns>
+            <TableColumn fx:id="colCodigoMedicoEspecialidad" prefWidth="221.0" text="Código Médico Especialidad" />
+            <TableColumn fx:id="colCodigoMedico" prefWidth="128.0" text="Código Médico" />
+            <TableColumn fx:id="colCodigoEspecialidad" prefWidth="157.0" text="Código Especialidad" />
+            <TableColumn fx:id="colCodigoHorario" prefWidth="139.0" text="Código Horario" />
+         </columns>
+         <effect>
+            <DropShadow color="#0e92ff" height="30.64" radius="13.8925" spread="0.45" width="26.93" />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="45.0" layoutY="559.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="106.0" text="Nuevo">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="168.0" layoutY="559.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="106.0" text="Eliminar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="92.0" fitWidth="119.0" layoutY="2.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Flecha%20volver.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

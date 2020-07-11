@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1244.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierbarahona.controller.TurnoController">
+   <children>
+      <Label layoutX="557.0" layoutY="18.0" prefHeight="54.0" prefWidth="132.0" text="Turno">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="122.0" prefHeight="23.0" prefWidth="109.0" text="Fecha Turno">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="166.0" prefHeight="23.0" prefWidth="109.0" text="Fecha Cita">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="209.0" prefHeight="23.0" prefWidth="123.0" text="Valor de Cita">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="608.0" layoutY="122.0" prefHeight="23.0" prefWidth="244.0" text="Código Médico Especialidad">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="609.0" layoutY="167.0" prefHeight="23.0" prefWidth="244.0" text="Código Responsable Turno">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="609.0" layoutY="211.0" prefHeight="23.0" prefWidth="146.0" text="Código Paciente">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="grpFechaTurno" layoutX="233.0" layoutY="119.0" prefHeight="30.0" prefWidth="293.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </GridPane>
+      <GridPane fx:id="grpFechaCita" layoutX="233.0" layoutY="163.0" prefHeight="30.0" prefWidth="293.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </GridPane>
+      <TextField fx:id="txtValorCita" editable="false" layoutX="232.0" layoutY="205.0" prefHeight="31.0" prefWidth="293.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </TextField>
+      <ComboBox fx:id="cmbCodigoMedicoEspecialidad" disable="true" layoutX="862.0" layoutY="116.0" prefHeight="31.0" prefWidth="293.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="cmbCodigoResponsableTurno" disable="true" layoutX="862.0" layoutY="161.0" prefHeight="31.0" prefWidth="293.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="cmbCodigoPaciente" disable="true" layoutX="862.0" layoutY="207.0" prefHeight="31.0" prefWidth="293.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </ComboBox>
+      <TableView fx:id="tblTurnos" layoutX="23.0" layoutY="293.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="250.0" prefWidth="1199.0">
+         <columns>
+            <TableColumn fx:id="colCodigoTurno" prefWidth="120.0" text="Código Turno" />
+            <TableColumn fx:id="colFechaTurno" prefWidth="184.0" text="Fecha Turno" />
+            <TableColumn fx:id="colFechaCita" prefWidth="180.0" text="Fecha Cita" />
+            <TableColumn fx:id="colValorCita" prefWidth="151.0" text="Valor de Cita" />
+            <TableColumn fx:id="colCodigoMedicoEspecialidad" prefWidth="213.0" text="Código Médico Especialidad" />
+            <TableColumn fx:id="colCodigoResponsableTurno" prefWidth="210.0" text="Código Responsable Turno" />
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="149.0" text="Código Paciente" />
+         </columns>
+         <effect>
+            <DropShadow color="#0e92ff" height="30.64" radius="13.8925" spread="0.45" width="26.93" />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="25.0" layoutY="586.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="106.0" text="Nuevo">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="149.0" layoutY="586.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="106.0" text="Eliminar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="273.0" layoutY="586.0" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="106.0" text="Editar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" disable="true" layoutX="397.0" layoutY="586.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="44.0" prefWidth="106.0" text="Cancelar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="92.0" fitWidth="119.0" layoutY="2.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Flecha%20volver.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="984.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierbarahona.controller.HorarioController">
+   <children>
+      <Label layoutX="436.0" layoutY="24.0" text="Horarios">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="48.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="chkLunes" disable="true" layoutX="207.0" layoutY="169.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="95.0" text="Lunes">
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </CheckBox>
+      <CheckBox fx:id="chkMartes" disable="true" layoutX="327.0" layoutY="169.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="95.0" text="Martes">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="chkMiercoles" disable="true" layoutX="454.0" layoutY="168.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="124.0" text="Miércoles ">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="chkJueves" disable="true" layoutX="613.0" layoutY="167.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="95.0" text="Jueves">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="chkViernes" disable="true" layoutX="740.0" layoutY="166.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="108.0" text="Viernes">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </CheckBox>
+      <TableView fx:id="tblHorarios" layoutX="11.0" layoutY="245.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="247.0" prefWidth="963.0">
+         <columns>
+            <TableColumn fx:id="colCodigoHorario" prefWidth="134.0" text="Código de horario" />
+            <TableColumn fx:id="colHoraInicio" prefWidth="152.0" text="Horario de inicio" />
+            <TableColumn fx:id="colHoraSalida" prefWidth="142.0" text="Horario de salida" />
+            <TableColumn fx:id="colLunes" prefWidth="101.0" text="Lunes" />
+            <TableColumn fx:id="colMartes" prefWidth="107.0" text="Martes" />
+            <TableColumn fx:id="colMiercoles" prefWidth="122.0" text="Miércoles " />
+            <TableColumn fx:id="colJueves" prefWidth="100.0" text="Jueves" />
+            <TableColumn fx:id="colViernes" prefWidth="108.0" text="Viernes" />
+         </columns>
+         <effect>
+            <DropShadow color="#0e92ff" height="30.64" radius="13.8925" spread="0.45" width="26.93" />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="11.0" layoutY="511.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="106.0" text="Nuevo">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="141.0" layoutY="511.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="106.0" text="Eliminar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="274.0" layoutY="511.0" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="106.0" text="Editar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" disable="true" layoutX="405.0" layoutY="511.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="44.0" prefWidth="106.0" text="Cancelar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="186.0" layoutY="113.0" prefHeight="23.0" prefWidth="143.0" text="Horario de inicio">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="541.0" layoutY="113.0" prefHeight="23.0" prefWidth="143.0" text="Horario de salida">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHoraInicio" editable="false" layoutX="344.0" layoutY="109.0" prefHeight="31.0" prefWidth="156.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtHoraSalida" editable="false" layoutX="693.0" layoutY="109.0" prefHeight="31.0" prefWidth="156.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </TextField>
+      <ImageView fitHeight="85.0" fitWidth="115.0" layoutY="1.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Flecha%20volver.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

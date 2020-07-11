@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteCitas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c1b467f-9d2a-4b61-9ee4-fe1ac0ec8a57">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="45"/>
+	<parameter name="Logo" class="java.io.InputStream"/>
+	<parameter name="Encabezado" class="java.io.InputStream"/>
+	<parameter name="NombreySlogan" class="java.io.InputStream"/>
+	<parameter name="PieDePagina" class="java.io.InputStream"/>
+	<parameter name="codPaciente" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call  sp_ListarDatosCitas($P{codPaciente})]]>
+	</queryString>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DPI" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Medico" class="java.lang.String"/>
+	<field name="licenciaMedica" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionReceta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802">
+			<image>
+				<reportElement x="2" y="719" width="553" height="83" uuid="f9025bf9-9cf6-4b21-b6d9-f7d09c2b3625"/>
+				<imageExpression><![CDATA[$P{PieDePagina}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="151" splitType="Stretch">
+			<image>
+				<reportElement x="2" y="0" width="553" height="83" uuid="76a335de-2f71-41fc-b7b9-0d8cdacf4e02"/>
+				<imageExpression><![CDATA[$P{Encabezado}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="151" y="86" width="266" height="59" uuid="1f859be7-58b6-4ba1-97ff-b02da8716363"/>
+				<imageExpression><![CDATA[$P{NombreySlogan}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="402" y="45" width="153" height="78" uuid="c1e65340-8f22-4170-8e24-4bbcaffa8bf1"/>
+				<imageExpression><![CDATA[$P{Logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="56" splitType="Stretch">
+			<staticText>
+				<reportElement x="129" y="0" width="306" height="37" uuid="b3b92a9c-fbc8-4a48-8113-a041f2563538"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Control de Citas]]></text>
+			</staticText>
+			<line>
+				<reportElement x="145" y="42" width="277" height="1" forecolor="#0099FF" uuid="06eb8e63-bb61-4186-9579-0d91ae8fc956"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="177" y="48" width="207" height="1" forecolor="#0099FF" uuid="2ae1d6d3-a3c9-4306-b4a7-86039127cb2e"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="86" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="78" width="553" height="3" forecolor="#0099FF" uuid="a8e0ebc8-5c27-42a0-b3cd-f7aa5019797f"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="13" y="41" width="66" height="22" uuid="dc9f8844-ec9a-478e-a5d7-83aab507054b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombres:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="209" y="40" width="62" height="23" uuid="da2d5cbd-9b40-4d44-84e5-3d61bf428822"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="212" y="5" width="147" height="20" uuid="20f7ba83-6af1-449a-a566-c2dd52ce64f6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paciente Atendido]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="83" y="41" width="100" height="22" uuid="c4c2a8ff-168c-45af-98de-30ed5682d088"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="272" y="40" width="100" height="23" uuid="75781612-bd2d-4c1f-adf7-75edb0c302f1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="398" y="40" width="44" height="23" uuid="6b02b1ec-50bf-4cdb-ad3f-053759da05fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DPI:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="444" y="40" width="100" height="22" uuid="5b40fbef-1e49-4f81-a9b6-d44ae67deefa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DPI}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="87" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="79" width="555" height="1" forecolor="#0099FF" uuid="0ab547fe-c818-459c-85b3-374caeadc16d"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="145" y="7" width="100" height="40" uuid="a3f1464e-27b1-4eb3-8a6d-a0076f5fd687"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Medico}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="3" width="100" height="44" uuid="e2d84354-d58d-420b-ad9a-8b1a9a683aa6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Médico que lo atendió:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="359" y="35" width="115" height="38" uuid="a9b93922-6ded-4652-8b3d-084e01150652"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{descripcionReceta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="358" y="7" width="115" height="20" uuid="bf0e2793-009a-44b5-a7ee-1daa0cf53c78"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Receta asignada]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="145" y="54" width="100" height="20" uuid="568ba6b0-bdee-46a5-9589-efd1f330da1f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{licenciaMedica}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="53" width="100" height="20" uuid="174dcab9-2c95-4cb2-8b79-8b49ecc6588c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Licencia Médica:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="32" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="5" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

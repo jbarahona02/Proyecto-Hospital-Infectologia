@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierbarahona.controller.TelefonoMedicoController">
+   <children>
+      <Label layoutX="234.0" layoutY="19.0" prefHeight="54.0" prefWidth="432.0" text="Teléfonos del Médico">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="130.0" prefHeight="23.0" prefWidth="150.0" text="Teléfono Personal">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="5.0" layoutY="172.0" prefHeight="23.0" prefWidth="145.0" text="Teléfono Trabajo">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="5.0" layoutY="214.0" prefHeight="23.0" prefWidth="150.0" text="Código de Médico">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTelefonoPersonal" editable="false" layoutX="219.0" layoutY="127.0" prefHeight="31.0" prefWidth="614.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtTelefonoTrabajo" editable="false" layoutX="219.0" layoutY="168.0" prefHeight="31.0" prefWidth="614.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblTelefonosMedicos" layoutX="36.0" layoutY="273.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="250.0" prefWidth="799.0">
+         <columns>
+            <TableColumn fx:id="colCodigoTelefono" prefWidth="191.0" text="Código Teléfono Médico" />
+            <TableColumn fx:id="colTelefonoPersonal" prefWidth="235.0" text="Teléfono Personal" />
+            <TableColumn fx:id="colTelefonoTrabajo" prefWidth="236.0" text="Teléfono Trabajo" />
+            <TableColumn fx:id="colCodigoMedico" prefWidth="136.0" text="Código Médico" />
+         </columns>
+         <effect>
+            <DropShadow color="#0e92ff" height="30.64" radius="13.8925" spread="0.45" width="26.93" />
+         </effect>
+      </TableView>
+      <ComboBox fx:id="cmbCodigoMedico" disable="true" layoutX="220.0" layoutY="210.0" prefHeight="31.0" prefWidth="293.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </ComboBox>
+      <Button fx:id="btnEditar" layoutX="276.0" layoutY="549.0" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="106.0" text="Editar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" disable="true" layoutX="397.0" layoutY="549.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="44.0" prefWidth="106.0" text="Cancelar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="155.0" layoutY="549.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="106.0" text="Eliminar">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNuevo" layoutX="35.0" layoutY="549.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="106.0" text="Nuevo">
+         <effect>
+            <DropShadow color="#0e92ff" height="30.33" radius="13.8875" width="27.22" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtCodigoTelefonoMedico" editable="false" layoutX="219.0" layoutY="89.0" prefHeight="31.0" prefWidth="614.0">
+         <effect>
+            <DropShadow color="#0e92ff" />
+         </effect>
+      </TextField>
+      <Label layoutX="4.0" layoutY="93.0" prefHeight="23.0" prefWidth="208.0" text="Código Teléfono Médico">
+         <effect>
+            <DropShadow color="#0e92ff" height="22.36" radius="9.5975" width="18.03" />
+         </effect>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="92.0" fitWidth="119.0" layoutY="2.0" onMouseClicked="#ventanaMedicos" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Flecha%20volver.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
